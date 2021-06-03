@@ -1,8 +1,11 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
+$color-primary: hsl(0, 66%, 61%);
+$color-text: hsl(0, 0%, 90%);
+$color-box-text: hsl(0, 0%, 80%);
 $color-subtext: hsl(0, 0%, 30%);
 $color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
+$color-background: #212121;
+$color-box-background: #414141;
+// $color-box-background: mix($color-background, $color-primary, 4%);
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -15,6 +18,7 @@ body {
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
+  background-color: $color-background;
   font-size: 1rem;
   max-width: 63em;
 
@@ -32,7 +36,7 @@ time {
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: mix($color-text, white, 80%);
+  color: mix($color-text, black, 80%);
   padding-top: 1em;
 }
 
@@ -48,6 +52,7 @@ blockquote {
   padding: 1.5em;
   margin: 0;
   font-size: 0.88em;
+  color: $color-box-text;
   background: $color-box-background;
   border-radius: $border-radius;
 
@@ -128,15 +133,15 @@ nav {
 }
 
 code {
-  background: #f5f5f5;
+  background: $color-box-background;
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
 
 .invalid-link {
-  color: #444444;
+  color: mix($color-text, $color-box-text, 50%);
   cursor: help;
-  background: #fafafa;
+  background: mix($color-primary, $color-background, 25%);
   padding: 0 0.1em;
 }
 
